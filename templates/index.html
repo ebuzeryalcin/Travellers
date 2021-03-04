@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to Bootswatch CSS CDN: https://www.bootstrapcdn.com/bootswatch/ -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/united/bootstrap.min.css"
-        type="text/css"">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/united/bootstrap.min.css" type="text/css"">
     <title>Travellers</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="{{ url_for('home') }}">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -54,6 +53,52 @@
             </div>
         </nav>
     </header>
+
+    <!--Used Bootstrap cards from this link https://getbootstrap.com/docs/4.5/components/card/#body -->
+    <section>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://www.fcmtravel.com/sites/default/files/styles/grid_items/public/why-choose-summary.jpg?itok=LAqXcbBq" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://www.thestyleinspiration.com/wp-content/uploads/2019/07/inexpensive-travel.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://st-process-production.s3.amazonaws.com/e046bb6c-3dd0-4d92-be54-134802864556/fcf7bcb5-17a4-435f-88dd-3c2ae96a7585.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card">
+                    <img src="https://www.antalyahomes.com/pages/istanbul-real-estate.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
 
     </footer>
