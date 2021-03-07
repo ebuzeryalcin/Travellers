@@ -1,3 +1,15 @@
+/*--------------------- General ----------------------*/
 body{
     background-color: rgb(241, 111, 4);
+}
+/*--------------------- Navbar ----------------------*/
+.navbar{
+    width: 100%;;
+}
+/*--------------------- Bootstrap cards ----------------------*/
+.all-cards{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
