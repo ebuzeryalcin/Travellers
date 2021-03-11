@@ -2,10 +2,15 @@
 body{
     background-color: rgb(241, 111, 4);
 }
+/*--------------------- Base.html ----------------------*/
+
 /*--------------------- Navbar ----------------------*/
 .navbar{
     width: 100%;
 }
+
+/*--------------------- Index.html ----------------------*/
+
 /*--------------------- Bootstrap cards ----------------------*/
 .all-cards{
     margin-right: 0px;
@@ -15,10 +20,10 @@ body{
 }
 
 
-/*--------------------- Register ----------------------*/
+/*--------------------- Register.html ----------------------*/
 * {box-sizing: border-box}
 
-/* Add padding to containers */
+/* Container padding */
 .container {
   padding: 16px;
   padding-top: 30px;
@@ -39,7 +44,7 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* styles of hr */
+/* hr style */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
@@ -61,7 +66,7 @@ hr {
   opacity:1;
 }
 
-/* Add a blue text color to links */
+/* Blue text color to link */
 a {
   color: dodgerblue;
 }
@@ -70,4 +75,10 @@ a {
 .signin {
   background-color: #f1f1f1;
   text-align: center;
+}
+
+/* Flash message style */
+.flashes h4{
+    text-align: center;
+    background-color: #f1f1f1;
 }

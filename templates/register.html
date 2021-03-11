@@ -1,5 +1,16 @@
-{% extends "index.html" %}
+{% extends "base.html" %}
 {% block content %}
+
+<!-- Flash message while registering -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="flashes">
+                    <h4 class="my-5">{{ message }}</h4>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 
 <!--Used register form from this link https://www.w3schools.com/howto/howto_css_register_form.asp -->
 <form class="container text-center" method="POST" action="{{ url_for('register') }}">
@@ -9,10 +20,12 @@
         <hr>
 
         <label for="username"><h4>Username</h4></label>
-        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+        <input type="text" placeholder="Enter Username" name="username" id="username" minlength="5"
+            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 
         <label for="psw"><h4>Password</h4></label>
-        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+        <input type="password" placeholder="Enter Password" name="password" id="password" minlength="5"
+            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 
         <button type="submit" class="registerbtn">Register</button>
         <hr>
