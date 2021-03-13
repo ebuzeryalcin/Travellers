@@ -43,8 +43,36 @@ def register():
         # put the new user into session/temporary cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
-
+    # Render register.html template if method is not POST, GET
     return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # username check in mongodb
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            # makes sure hashed password matches
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    # If it exists username will temporary be saved to session, which is a temporary cookie
+                    session["user"] = request.form.get("username").lower()
+                    # If successful flash message is shown
+                    flash("Welcome, {}!".format(request.form.get("username")))
+            else:
+                # the username/&password is invalid, flash message appears, redirecting to login page
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # if username doesnt exist flash message generated, user gets redirected to login page again
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+    # Render login.html template if method is not POST, GET
+    return render_template("login.html")
 
 
 if __name__ == "__main__":
