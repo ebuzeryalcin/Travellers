@@ -43,6 +43,9 @@ def register():
         # put the new user into session/temporary cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        # Redirects the user to the profile of its own
+        return redirect(url_for("profile", username=session["user"]))
+
     # Render register.html template if method is not POST, GET
     return render_template("register.html")
 
@@ -61,7 +64,11 @@ def login():
                     # If it exists username will temporary be saved to session, which is a temporary cookie
                     session["user"] = request.form.get("username").lower()
                     # If successful flash message is shown
-                    flash("Welcome, {}!".format(request.form.get("username")))
+                    flash("Welcome, {}!".format(
+                        request.form.get("username")))
+                    # Redirects the user to the profile of its own
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
             else:
                 # the username/&password is invalid, flash message appears, redirecting to login page
                 flash("Incorrect Username and/or Password")
@@ -73,6 +80,14 @@ def login():
             return redirect(url_for("login"))
     # Render login.html template if method is not POST, GET
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # This generates the urser's username from my db with session method, temporary cookie.
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
 
 
 if __name__ == "__main__":
