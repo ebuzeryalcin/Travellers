@@ -87,7 +87,20 @@ def profile(username):
     # This generates the urser's username from my db with session method, temporary cookie.
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+
+    # If session user cookie is true return to profile page
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))
+
+
+@app.route("/logout")
+def logout():
+    # User session cookie is removed with session pop method
+    flash("Logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
