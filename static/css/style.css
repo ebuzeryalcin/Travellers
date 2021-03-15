@@ -19,6 +19,31 @@ body{
     padding-bottom: 25px;
 }
 
+/*--------------------- profile.html ----------------------*/
+#header-profile {
+  background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center / cover no-repeat ;
+}
+
+.circle-top {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgb(92, 66, 141);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle-top-text{
+font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
 
 /*--------------------- Register.html ----------------------*/
 * {box-sizing: border-box}
