@@ -95,6 +95,11 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/places")
+def places():
+    return render_template("places.html")
+
+
 @app.route("/logout")
 def logout():
     # User session cookie is removed with session pop method

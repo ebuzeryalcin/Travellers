@@ -1,22 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- Flash message while loging in -->
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="flashes">
-                    <h4 class="my-5">{{ message }}</h4>
-                </div>
-            {% endfor %}
-        {% endif %}
-    {% endwith %}
-
 <!--Used login form(copied from register) from this link https://www.w3schools.com/howto/howto_css_register_form.asp -->
 <form class="container text-center">
     <div class="container text-center circle-top">
         <h3 class="circle-top-text">
-            {{ username }}'s Profile
+            Places
         </h3>
     </div>
 </form>
@@ -31,7 +20,7 @@
       <div class="card-body">
         <h5 class="card-title">Sunset</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+       <!-- <a href="" class="btn btn-outline-success btn-sm">Read More</a> -->
         <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
       </div>
      </div>
@@ -42,7 +31,7 @@
       <div class="card-body">
         <h5 class="card-title">Sunset</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+       <!-- <a href="" class="btn btn-outline-success btn-sm">Read More</a> -->
         <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
       </div>
       </div>
@@ -53,7 +42,7 @@
       <div class="card-body">
         <h5 class="card-title">Sunset</h5>
         <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+       <!-- <a href="" class="btn btn-outline-success btn-sm">Read More</a> -->
         <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
       </div>
      </div>
