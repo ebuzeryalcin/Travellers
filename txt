@@ -1,0 +1,10 @@
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/")
+@app.route("/get_places")
+def get_places():
+    places = list(mongo.db.places.find())
+    return render_template("places.html", places=places)

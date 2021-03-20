@@ -44,6 +44,11 @@ font-size: 30px;
   margin-top: 40px;
 }
 
+/*--------------------- add_place.html ----------------------*/
+.add-place-form{
+    color: #f1f1f1;
+    background-color: rgb(92, 66, 141);
+}
 
 /*--------------------- Register.html ----------------------*/
 * {box-sizing: border-box}

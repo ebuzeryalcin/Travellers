@@ -31,6 +31,7 @@
                     </li>
                 {% if session.user %}
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('places') }}">Places</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('add_place') }}">New Place</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Edit Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
