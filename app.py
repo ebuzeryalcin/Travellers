@@ -23,6 +23,12 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/profile/ebbeebbe", methods=["GET", "POST"])
+def get_place():
+    places = mongo.db.places.find()
+    return render_template("profile.html", places=places)
+
+
 @app.route("/register/", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
