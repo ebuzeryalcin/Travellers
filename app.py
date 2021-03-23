@@ -5,11 +5,16 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 if os.path.exists("env.py"):
     import env
 
 
 app = Flask(__name__)
+
+UPLOAD_FOLDER = '/static/uploaded_images'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
@@ -21,12 +26,6 @@ mongo = PyMongo(app)
 @app.route("/")
 def home():
     return render_template("index.html")
-
-
-@app.route("/profile/ebbeebbe", methods=["GET", "POST"])
-def get_place():
-    places = mongo.db.places.find()
-    return render_template("profile.html", places=places)
 
 
 @app.route("/register/", methods=["GET", "POST"])
@@ -90,13 +89,16 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    places = mongo.db.places.find({"created_by": username})
     # This generates the urser's username from my db with session method, temporary cookie.
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
     # If session user cookie is true return to profile page
     if session["user"]:
-        return render_template("profile.html", username=username)
+        return render_template(
+            "profile.html", username=username,
+            places=places)
 
     return redirect(url_for("login"))
 
@@ -118,12 +120,15 @@ def logout():
 @app.route("/add_place", methods=["GET", "POST"])
 def add_place():
     if request.method == "POST":
+        f = request.files['file']
+        f.save("static/uploaded_images/"+secure_filename(f.filename))
         place = {
             "place_city": request.form.get("place_city"),
             "place_country": request.form.get("place_country"),
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
+            "place_file": f.filename,
             "created_by": session["user"]
         }
         mongo.db.places.insert_one(place)

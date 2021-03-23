@@ -13,7 +13,7 @@
 <!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
     <div class="container">
         <div class="row">
-            <form class="col-lg-12 mb-4" method="POST" action="{{ url_for('add_place') }}">
+            <form class="col-lg-12 mb-4" method="POST" action="{{ url_for('add_place') }}" enctype="multipart/form-data" >
                 <div class="card add-place-form">
                     <img src="#"
                         alt="" class="card-img-top">
@@ -46,6 +46,7 @@
                         <label for="place_cons">Cons</label>
                         <input id="place_cons" name="place_cons" minlength="2" maxlength="20"
                         type="text" class="validate" required>
+                        <input type="file" name="file" required>
                         <!-- submit button -->
                         <button type="submit" class="registerbtn">Add Place</button>
                     </div>
