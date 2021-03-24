@@ -139,6 +139,13 @@ def add_place():
     return render_template("add_place.html", places=places)
 
 
+@app.route("/edit_place/<place_id>", methods=["GET", "POST"])
+def edit_place(place_id):
+    place = mongo.db.places.find_one({"_id": ObjectId(place_id)})
+    places = mongo.db.places.find()
+    return render_template("edit_place.html", place=place, places=places)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!--Used add form(copied from register) from this link https://www.w3schools.com/howto/howto_css_register_form.asp -->
+<form class="container text-center">
+    <div class="container text-center circle-top">
+        <h3 class="circle-top-text">
+            Edit Place
+        </h3>
+    </div>
+</form>
+<hr>
+<!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
+    <div class="container">
+        <div class="row">
+            <form class="col-lg-12 mb-4" method="POST" action="{{ url_for('edit_place', place_id=place._id) }}" enctype="multipart/form-data" >
+                <div class="card add-place-form">
+                    <img src="#"
+                        alt="" class="card-img-top">
+                    <!-- city -->
+                    <div class="card-body input-field-add">
+                        <label for="place_city">City</label>
+                        <input id="place_city" name="place_city" minlength="2" maxlength="20"
+                        type="text" class="validate" required>
+                    </div>
+                        <!-- country -->
+                    <div class="card-body input-field-add">
+                        <label for="place_country">Country</label>
+                        <input id="place_country" name="place_country" minlength="2" maxlength="20"
+                        type="text" class="validate" required>
+                    </div>
+                        <!-- description -->
+                    <div class="card-body input-field-add">
+                        <label for="place_description">Description</label>
+                        <textarea id="place_description" class="form-control validate" name="place_description" 
+                        minlength="10" maxlength="200" type="text" rows="3" required></textarea>
+                    </div>
+                        <!-- pros -->
+                        <div class="card-body input-field-add">
+                        <label for="place_pros">Pros</label>
+                        <input id="place_pros" name="place_pros" minlength="2" maxlength="20"
+                        type="text" class="validate" required>
+                    </div>
+                        <!-- cons -->
+                        <div class="card-body input-field-add">
+                        <label for="place_cons">Cons</label>
+                        <input id="place_cons" name="place_cons" minlength="2" maxlength="20"
+                        type="text" class="validate" required>
+                        <input type="file" name="file" required>
+                        <!-- submit button -->
+                        <button type="submit" class="registerbtn">Edit Place</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+
+
+{% endblock %}
