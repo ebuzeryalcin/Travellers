@@ -128,7 +128,7 @@ def add_place():
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
-            "place_file": f.filename,
+            "place_file": "../static/uploaded_images/" + f.filename,
             "created_by": session["user"]
         }
         mongo.db.places.insert_one(place)
