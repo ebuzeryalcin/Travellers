@@ -162,6 +162,14 @@ def edit_place(place_id):
     return render_template("edit_place.html", place=place, places=places)
 
 
+# deleting previously added place
+@app.route("/delete_place/<place_id>")
+def delete_place(place_id):
+    mongo.db.places.remove({"_id": ObjectId(place_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
