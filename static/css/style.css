@@ -2,7 +2,39 @@
 body{
     background-color: rgb(241, 111, 4);
 }
+
+.circle-top {
+    position:relative;
+    width:40%;
+    padding-bottom:40%;
+    background:rgb(92, 66, 141);
+    border-radius:50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.circle-top-text{
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    color: #f1f1f1;
+    font-size: 13vw;
+    line-height: 1;
+    text-align: center;
+}
+/*media only screen fixed to ipad screen and below*/
+@media only screen and (min-width: 769px) {
+.home-top {
+    height: 100vh
+  }
+}
+
 /*---------------------index.html ----------------------*/
+
+
 
 /*--------------------- Navbar ----------------------*/
 .navbar{
@@ -20,29 +52,12 @@ body{
 }
 
 /*--------------------- profile.html ----------------------*/
-#header-profile {
-  background: url(https://images.unsplash.com/photo-1415795854641-f4a487a0fdc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80) center center / cover no-repeat ;
-}
 
-.circle-top {
-    position:relative;
-    width:50%;
-    padding-bottom:50%;
-    background:rgb(92, 66, 141);
-    border-radius:50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-}
-
-.circle-top-text{
-    position:absolute;
-    top:50%; left:50%;
-    transform: translate(-50%, -50%);
-    margin:0;
+.home-desc{
     color: #f1f1f1;
-    font-size: 20vw;
+    font-size: 9vw;
     line-height: 1;
+    text-align: center;
 }
 
 /*--------------------- add_place.html ----------------------*/
