@@ -2,7 +2,7 @@
 body{
     background-color: rgb(241, 111, 4);
 }
-/*--------------------- Base.html ----------------------*/
+/*---------------------index.html ----------------------*/
 
 /*--------------------- Navbar ----------------------*/
 .navbar{
@@ -25,23 +25,24 @@ body{
 }
 
 .circle-top {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: rgb(92, 66, 141);
-  margin-left: auto;
-  margin-right: auto;
+    position:relative;
+    width:50%;
+    padding-bottom:50%;
+    background:rgb(92, 66, 141);
+    border-radius:50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
 
 .circle-top-text{
-font-size: 30px;
-  line-height: 50px;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    margin:0;
+    color: #f1f1f1;
+    font-size: 20vw;
+    line-height: 1;
 }
 
 /*--------------------- add_place.html ----------------------*/

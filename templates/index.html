@@ -1,46 +1,65 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--Used Bootstrap cards from this link https://getbootstrap.com/docs/4.5/components/card/#body -->
-    <section>
-        <div class="row row-cols-1 row-cols-md-2 all-cards">
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="static/images/flight.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+<!--Used login form(copied from register) from this link https://www.w3schools.com/howto/howto_css_register_form.asp -->
+<div class="circle-top">
+    <h1 class="circle-top-text">Welcome!</h1>
+</div>
+
+<hr>
+    <!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{url_for('static', filename='images/lion.webp')}}">
+                        <div class="card-body">
+                            <h3 class="card-title">The Oasis</h3>
+                            <h4 class="card-title">South Africa</h4>
+                            <p class="card-text">Description: A wild place in South Africa, wild animals and lots of danger
+                                but I like,
+                                like it a lot. This is a dream come true. :)</p>
+                            <p class="card-text font-weight-bold">Pros: AMAZING NATURE, love it!</p>
+                            <p class="card-text font-weight-bold">Cons: So WILD!</p>
+                            <p>Created by: Henric</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="static/images/free.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{url_for('static', filename='images/puglia.webp')}}">
+                        <div class="card-body">
+                            <h3 class="card-title">Puglia</h3>
+                            <h4 class="card-title">Italy</h4>
+                            <p class="card-text">Description: These white, conical roofed homes can be found in many places
+                                in Europe,
+                                but they are particularly linked to this region of Puglia and around the Vale d’Itria and
+                                UNESCO
+                                Alberobello.</p>
+                            <p class="card-text font-weight-bold">Pros: Wander around the narrow streets!</p>
+                            <p class="card-text font-weight-bold">Cons: Couldn't find :)</p>
+                            <p>Created by: Nick</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="static/images/luggage.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card">
-                    <img src="static/images/cami.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{url_for('static', filename='images/sultanahmet.webp')}}">
+                        <div class="card-body">
+                            <h3 class="card-title">Istanbul</h3>
+                            <h4 class="card-title">Turkey</h4>
+                            <p class="card-text">Description: I realised when I used to say I had ‘done’ any country or
+                                destination it
+                                simply wasn’t true, no matter how long I had spent there. Places would always surprises me
+                                and swallow
+                                me whole again second and third time around. Istanbul is one of those places that you really
+                                shouldn’t
+                                rush, trust me, you will regret it…</p>
+                            <p class="card-text font-weight-bold">Pros: The food, I love it!</p>
+                            <p class="card-text font-weight-bold">Cons: Lots of people :)</p>
+                            <p>Created by: Adam</p>
+                        </div>
                     </div>
                 </div>
             </div>
