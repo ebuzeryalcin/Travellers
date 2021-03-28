@@ -139,10 +139,26 @@ def add_place():
     return render_template("add_place.html", places=places)
 
 
+# Editing id, shows previously inserted data for uploaded id
 @app.route("/edit_place/<place_id>", methods=["GET", "POST"])
 def edit_place(place_id):
+    if request.method == "POST":
+        f = request.files['file']
+        f.save("static/uploaded_images/"+secure_filename(f.filename))
+        submit = {
+            "place_city": request.form.get("place_city"),
+            "place_country": request.form.get("place_country"),
+            "place_description": request.form.get("place_description"),
+            "place_pros": request.form.get("place_pros"),
+            "place_cons": request.form.get("place_cons"),
+            "place_file": "../static/uploaded_images/" + f.filename,
+            "created_by": session["user"]
+        }
+        mongo.db.places.update({"_id": ObjectId(place_id)}, submit)
+        flash("Place Successfully Updated")
+
     place = mongo.db.places.find_one({"_id": ObjectId(place_id)})
-    places = mongo.db.places.find()
+    places = mongo.db.places.find().sort("_id")
     return render_template("edit_place.html", place=place, places=places)
 
 

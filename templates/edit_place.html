@@ -13,7 +13,7 @@
 <!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
     <div class="container">
         <div class="row">
-            <form class="col-lg-12 mb-4" method="POST" action="{{ url_for('edit_place', place_id=place._id) }}" enctype="multipart/form-data" >
+            <form class="col-lg-12 mb-4" method="POST" action="{{ url_for('edit_place', place_id=place._id) }}" enctype="multipart/form-data">
                 <div class="card add-place-form">
                     <img src="#"
                         alt="" class="card-img-top">
@@ -47,10 +47,11 @@
                         <label for="place_cons">Cons</label>
                         <input id="place_cons" name="place_cons" minlength="2" maxlength="20"
                         type="text" class="validate" value="{{ place.place_cons }}" required>
-                        <input type="file" name="file">
+                        <!-- image, upload -->
+                        <input type="file" name="file" required>
                         <!-- submit button -->
                         <button type="submit" class="registerbtn">Edit Place</button>
-                        <!-- cancel button -->
+                        <!-- cancel button, if form is cancelled user gets redirected to home page -->
                         <a href="{{ url_for('home') }}" class="btn btn-danger btn-block btn-lg" role="button" aria-pressed="true">Cancel</a>
                     </div>
                     {% endfor %}
