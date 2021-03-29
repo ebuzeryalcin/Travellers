@@ -20,11 +20,11 @@
 <!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
 
 <section id="gallery">
-    <div class="container">
+    <div class="container" id="scrolling-card" onscroll="scrollcard()">
         <div class="row">
             {% for place in places %}
             <div class="col-lg-4 mb-4">
-                <div class="card">
+                <div class="card card-of-place">
                     <img class="card-img-top" src="{{ place.place_file }}">
                     <div class="card-body">
                         <h3 class="card-title">{{ place.place_city }}</h3>

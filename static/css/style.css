@@ -32,9 +32,18 @@ body{
   }
 }
 
+/*---------------------base.html ----------------------*/
+
+.card-of-place {
+    overflow: scroll;
+    border: 10px solid black;
+    width: auto;
+    height: 500px;
+    border-radius: 10px;
+}
+
+
 /*---------------------index.html ----------------------*/
-
-
 
 /*--------------------- Navbar ----------------------*/
 .navbar{

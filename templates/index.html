@@ -16,10 +16,10 @@
 
     <!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
     <section id="gallery">
-        <div class="container">
+        <div class="container" id="scrolling-card" onscroll="scrollcard()">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <div class="card">
+                    <div class="card card-of-place">
                         <img class="card-img-top" src="{{url_for('static', filename='images/lion.webp')}}">
                         <div class="card-body">
                             <h3 class="card-title">The Oasis</h3>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <div class="card">
+                    <div class="card card-of-place">
                         <img class="card-img-top" src="{{url_for('static', filename='images/puglia.webp')}}">
                         <div class="card-body">
                             <h3 class="card-title">Puglia</h3>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
-                    <div class="card">
+                    <div class="card card-of-place">
                         <img class="card-img-top" src="{{url_for('static', filename='images/sultanahmet.webp')}}">
                         <div class="card-body">
                             <h3 class="card-title">Istanbul</h3>
