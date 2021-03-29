@@ -25,8 +25,8 @@ body{
     line-height: 1;
     text-align: center;
 }
-/*media only screen fixed to ipad screen and below*/
-@media only screen and (min-width: 769px) {
+/*media only screen fixed to large devices and below*/
+@media only screen and (min-width: 1200px) {
 .home-top {
     height: 100vh
   }
@@ -58,6 +58,7 @@ body{
     font-size: 9vw;
     line-height: 1;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 /*--------------------- add_place.html ----------------------*/
