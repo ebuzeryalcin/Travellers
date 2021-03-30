@@ -35,7 +35,7 @@ body{
 /*---------------------base.html ----------------------*/
 
 .card-of-place {
-    overflow: scroll;
+    overflow: overlay;
     border: 10px solid black;
     width: auto;
     height: 500px;

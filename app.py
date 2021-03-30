@@ -158,7 +158,6 @@ def edit_place(place_id):
         flash("Place Successfully Updated")
 
     place = mongo.db.places.find_one({"_id": ObjectId(place_id)})
-    places = mongo.db.places.find().sort("_id")
     return render_template("edit_place.html", place=place, places=places)
 
 
