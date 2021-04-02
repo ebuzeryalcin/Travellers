@@ -8,9 +8,10 @@
 <hr>
 <!--Used card code from this link https://freefrontend.com/bootstrap-cards/ -->
 <section id="gallery">
-    <div class="container">
+    <div class="container" id="scrolling-card" onscroll="scrollcard()">
         <div class="row">
             <div class="col-lg-4 mb-4">
+                <div class="card card-of-place">
                 <div class="card">
                     <img class="card-img-top" src="{{url_for('static', filename='images/lion.webp')}}">
                     <div class="card-body">
@@ -24,36 +25,6 @@
                         <p>Created by: Henric</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="{{url_for('static', filename='images/puglia.webp')}}">
-                    <div class="card-body">
-                        <h3 class="card-title">Puglia</h3>
-                        <h4 class="card-title">Italy</h4>
-                        <p class="card-text">Description: These white, conical roofed homes can be found in many places in Europe,
-                            but they are particularly linked to this region of Puglia and around the Vale d’Itria and UNESCO
-                            Alberobello.</p>
-                        <p class="card-text font-weight-bold">Pros: Wander around the narrow streets!</p>
-                        <p class="card-text font-weight-bold">Cons: Couldn't find :)</p>
-                        <p>Created by: Nick</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img class="card-img-top" src="{{url_for('static', filename='images/sultanahmet.webp')}}">
-                    <div class="card-body">
-                        <h3 class="card-title">Istanbul</h3>
-                        <h4 class="card-title">Turkey</h4>
-                        <p class="card-text">Description: I realised when I used to say I had ‘done’ any country or destination it
-                            simply wasn’t true, no matter how long I had spent there. Places would always surprises me and swallow
-                            me whole again second and third time around. Istanbul is one of those places that you really shouldn’t
-                            rush, trust me, you will regret it…</p>
-                        <p class="card-text font-weight-bold">Pros: The food, I love it!</p>
-                        <p class="card-text font-weight-bold">Cons: Lots of people :)</p>
-                        <p>Created by: Adam</p>
-                    </div>
                 </div>
             </div>
         </div>

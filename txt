@@ -3,3 +3,7 @@ edit place profile sayfasina yönlendirecek
 edit yapilirken image degisirse eski image silinecek
 
 edit yapilirken image degismezse mevcut image kalacak
+
+place'e randomly veya herhangi bir sekilde degisik userlarin place cardlari yansinin
+
+if mobil sayfasi cardlarda scroll olmasin

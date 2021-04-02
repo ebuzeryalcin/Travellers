@@ -33,13 +33,13 @@ body{
 }
 
 /*---------------------base.html ----------------------*/
-
+@media only screen and (min-width: 992px) {
 .card-of-place {
     overflow: overlay;
-    border: 10px solid black;
     width: auto;
     height: 500px;
     border-radius: 10px;
+}
 }
 
 
