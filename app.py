@@ -89,6 +89,10 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    try:
+        session["user"]
+    except KeyError:
+        return redirect(url_for("login"))
     places = mongo.db.places.find({"created_by": username})
     # This generates the urser's username from my db with session method, temporary cookie.
     username = mongo.db.users.find_one(
@@ -119,6 +123,10 @@ def logout():
 # Saves input from the add place form and post to mongodb
 @app.route("/add_place", methods=["GET", "POST"])
 def add_place():
+    try:
+        session["user"]
+    except KeyError:
+        return redirect(url_for("login"))
     if request.method == "POST":
         f = request.files['file']
         f.save("static/uploaded_images/"+secure_filename(f.filename))
@@ -142,6 +150,10 @@ def add_place():
 # Editing id, shows previously inserted data for uploaded id
 @app.route("/edit_place/<place_id>", methods=["GET", "POST"])
 def edit_place(place_id):
+    try:
+        session["user"]
+    except KeyError:
+        return redirect(url_for("login"))
     if request.method == "POST":
         f = request.files['file']
         f.save("static/uploaded_images/"+secure_filename(f.filename))
@@ -155,7 +167,7 @@ def edit_place(place_id):
             "created_by": session["user"]
         }
         mongo.db.places.update({"_id": ObjectId(place_id)}, submit)
-        flash("Place Successfully Updated")
+        flash("Place Successfully Updated, go back to My Place!")
 
     place = mongo.db.places.find_one({"_id": ObjectId(place_id)})
     return render_template("edit_place.html", place=place, places=places)
@@ -164,6 +176,10 @@ def edit_place(place_id):
 # deleting previously added place
 @app.route("/delete_place/<place_id>")
 def delete_place(place_id):
+    try:
+        session["user"]
+    except KeyError:
+        return redirect(url_for("login"))
     mongo.db.places.remove({"_id": ObjectId(place_id)})
     flash("Task Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
