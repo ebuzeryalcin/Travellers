@@ -3,6 +3,10 @@ body{
     background-color: rgb(241, 111, 4);
 }
 
+/*.section-bg-color{
+    background-color: #e95420;
+}*/
+
 .circle-top {
     position:relative;
     width:40%;
@@ -42,7 +46,24 @@ body{
 }
 }
 
+/*Footer*/
+.footer-logo {
+    max-width: 180px;
+    height: auto;
+    }
 
+.facebook-color{
+    background-color: #3b5998
+}
+.instagram-color{
+    background-color: #ac2bac
+}
+.twitter-color{
+    background-color: #55acee
+}
+.youtube-color{
+    background-color: #ee0d0d
+}
 /*---------------------index.html ----------------------*/
 
 /*--------------------- Navbar ----------------------*/
