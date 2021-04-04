@@ -64,6 +64,9 @@ body{
 .youtube-color{
     background-color: #ee0d0d
 }
+.copyright-opacity{
+    background-color: rgba(0, 0, 0, 0.2)
+}
 /*---------------------index.html ----------------------*/
 
 /*--------------------- Navbar ----------------------*/

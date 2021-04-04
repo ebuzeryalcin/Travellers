@@ -20,11 +20,11 @@
         <hr>
 
         <label for="username"><h4>Username</h4></label>
-        <input type="text" placeholder="Enter Username" name="username" id="username" minlength="5"
-            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+        <input type="text" placeholder="Enter Username (4-10 characters)" name="username" id="username" minlength="4"
+            maxlength="10" pattern="^[a-zA-Z0-9]{4,10}$" class="validate" required>
 
         <label for="psw"><h4>Password</h4></label>
-        <input type="password" placeholder="Enter Password" name="password" id="password" minlength="5"
+        <input type="password" placeholder="Enter Password (5-15 characters)" name="password" id="password" minlength="5"
             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 
         <button type="submit" class="registerbtn">Login</button>
