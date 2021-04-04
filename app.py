@@ -6,7 +6,6 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
-from ast import literal_eval
 if os.path.exists("env.py"):
     import env
 
@@ -157,6 +156,13 @@ def edit_place(place_id):
     except KeyError:
         return redirect(url_for("login"))
     if request.method == "POST":
+        olddata = mongo.db.places.find_one({"_id": ObjectId(place_id)})
+        try:
+            os.remove("./static/uploaded_images/" + olddata["place_file"])
+        except OSError as e:
+            print(e)
+        else:
+            print("File is deleted successfully")
         f = request.files['file']
         f.save("static/uploaded_images/"+secure_filename(f.filename))
         submit = {
