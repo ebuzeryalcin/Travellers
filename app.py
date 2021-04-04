@@ -6,6 +6,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
+from ast import literal_eval
 if os.path.exists("env.py"):
     import env
 
@@ -65,8 +66,8 @@ def login():
         if existing_user:
             # makes sure hashed password matches
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    # If it exists username will temporary be saved to session, which is a temporary cookie
+                existing_user["password"], request.form.get(
+                    "password")):
                     session["user"] = request.form.get("username").lower()
                     # If successful flash message is shown
                     flash("Welcome, {}!".format(
@@ -109,7 +110,8 @@ def profile(username):
 
 @app.route("/places")
 def places():
-    return render_template("places.html")
+    places = mongo.db.places.find()
+    return render_template("places.html", places=places)
 
 
 @app.route("/logout")
@@ -163,11 +165,11 @@ def edit_place(place_id):
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
-            "place_file": "../static/uploaded_images/" + f.filename,
+            "place_file": f.filename,
             "created_by": session["user"]
         }
         mongo.db.places.update({"_id": ObjectId(place_id)}, submit)
-        flash("Place Successfully Updated, go back to My Place!")
+        flash("Place Successfully Updated, go back to My Profile!")
 
     place = mongo.db.places.find_one({"_id": ObjectId(place_id)})
     return render_template("edit_place.html", place=place, places=places)

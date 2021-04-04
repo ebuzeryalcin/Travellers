@@ -1,13 +1,12 @@
 edit place profile sayfasina yönlendirecek/tamam
 
-edit yapilirken image degisirse eski image silinecek
+edit yapilirken image degisirse eski image silinecek/tastamam
 
 
-edit yapilirken image degismezse mevcut image kalacak, requiredi kaldir edir sayfasindan
-resim yuklemesi bos mu geldi dolu mu geldi, bossa islem yaptirma, doluysa databaseden file ismini al eskisi sil yenisini yapistir. find yap
+edit yapilirken image degismezse mevcut image kalacak, requiredi kaldir edir sayfasindan/tamam
 
-place'e randomly veya herhangi bir sekilde degisik userlarin place cardlari yansinin
+place'e randomly veya herhangi bir sekilde degisik userlarin place cardlari yansinin/tamam
 
 if mobil sayfasi cardlarda scroll olmasin/tamam
 
-guvenlik zaafi
+guvenlik zaafi/tamam

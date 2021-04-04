@@ -10,23 +10,21 @@
 <section id="gallery">
     <div class="container" id="scrolling-card" onscroll="scrollcard()">
         <div class="row">
+            {% for place in places %}
             <div class="col-lg-4 mb-4">
                 <div class="card card-of-place">
-                <div class="card">
-                    <img class="card-img-top" src="{{url_for('static', filename='images/lion.webp')}}">
+                    <img class="card-img-top" src="../static/uploaded_images/{{ place.place_file }}">
                     <div class="card-body">
-                        <h3 class="card-title">The Oasis</h3>
-                        <h4 class="card-title">South Africa</h4>
-                        <p class="card-text">Description: A wild place in South Africa, wild animals and lots of danger
-                            but I like,
-                            like it a lot. This is a dream come true. :)</p>
-                        <p class="card-text font-weight-bold">Pros: AMAZING NATURE, love it!</p>
-                        <p class="card-text font-weight-bold">Cons: So WILD!</p>
-                        <p>Created by: Henric</p>
+                        <h3 class="card-title">{{ place.place_city }}</h3>
+                        <h4 class="card-title">{{ place.place_country }}</h4>
+                        <p class="card-text">Description: {{ place.place_description }}</p>
+                        <p class="card-text font-weight-bold">Pros: {{ place.place_pros }}</p>
+                        <p class="card-text font-weight-bold">Cons: {{ place.place_cons }}</p>
+                        <p>Created by: {{ place.created_by }}</p>
                     </div>
                 </div>
-                </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
