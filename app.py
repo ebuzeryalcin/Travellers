@@ -156,6 +156,7 @@ def edit_place(place_id):
     except KeyError:
         return redirect(url_for("login"))
     if request.method == "POST":
+    # Used function by this link: https://www.delftstack.com/howto/python/how-to-delete-a-file-and-directory/#delete-a-file-in-python
         olddata = mongo.db.places.find_one({"_id": ObjectId(place_id)})
         try:
             os.remove("./static/uploaded_images/" + olddata["place_file"])

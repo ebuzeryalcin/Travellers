@@ -2,3 +2,7 @@
 function scrollcard() {
   document.getElementById("scrolling-card");
 }
+
+$("#place_description").keyup(function(){
+      $("#desc-char").text("Characters left: " + (250 - $(this).val().length));
+    });
