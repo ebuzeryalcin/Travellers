@@ -172,7 +172,8 @@ def edit_place(place_id):
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
-            "place_file": f.filename,
+            "place_file": url_for(
+                'static', filename="uploaded_images/new-recipe.jpg"),
             "created_by": session["user"]
         }
         mongo.db.places.update({"_id": ObjectId(place_id)}, submit)
