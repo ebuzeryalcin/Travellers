@@ -128,6 +128,7 @@ def add_place():
         session["user"]
     except KeyError:
         return redirect(url_for("login"))
+# Used this method for uploading image: https://pythonbasics.org/flask-upload-file/
     if request.method == "POST":
         f = request.files['file']
         f.save("static/uploaded_images/"+secure_filename(f.filename))
@@ -172,8 +173,7 @@ def edit_place(place_id):
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
-            "place_file": url_for(
-                'static', filename="uploaded_images/new-recipe.jpg"),
+            "place_file": f.filename,
             "created_by": session["user"]
         }
         mongo.db.places.update({"_id": ObjectId(place_id)}, submit)
