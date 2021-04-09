@@ -128,17 +128,14 @@ def add_place():
         session["user"]
     except KeyError:
         return redirect(url_for("login"))
-# Used this method for uploading image: https://pythonbasics.org/flask-upload-file/
     if request.method == "POST":
-        f = request.files['file']
-        f.save("static/uploaded_images/"+secure_filename(f.filename))
         place = {
             "place_city": request.form.get("place_city"),
             "place_country": request.form.get("place_country"),
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
-            "place_file": f.filename,
+            "place_file": request.form.get("image_url"),
             "created_by": session["user"]
         }
         mongo.db.places.insert_one(place)
@@ -157,23 +154,13 @@ def edit_place(place_id):
     except KeyError:
         return redirect(url_for("login"))
     if request.method == "POST":
-    # Used function by this link: https://www.delftstack.com/howto/python/how-to-delete-a-file-and-directory/#delete-a-file-in-python
-        olddata = mongo.db.places.find_one({"_id": ObjectId(place_id)})
-        try:
-            os.remove("./static/uploaded_images/" + olddata["place_file"])
-        except OSError as e:
-            print(e)
-        else:
-            print("File is deleted successfully")
-        f = request.files['file']
-        f.save("static/uploaded_images/"+secure_filename(f.filename))
         submit = {
             "place_city": request.form.get("place_city"),
             "place_country": request.form.get("place_country"),
             "place_description": request.form.get("place_description"),
             "place_pros": request.form.get("place_pros"),
             "place_cons": request.form.get("place_cons"),
-            "place_file": f.filename,
+            "place_file": request.form.get("image_url"),
             "created_by": session["user"]
         }
         mongo.db.places.update({"_id": ObjectId(place_id)}, submit)

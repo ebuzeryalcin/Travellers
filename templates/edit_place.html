@@ -44,24 +44,27 @@
                         <div id="desc-char"></div>
                     </div>
                         <!-- pros -->
-                        <div class="card-body input-field-add">
+                    <div class="card-body input-field-add">
                         <label for="place_pros">Pros</label>
                         <input id="place_pros" placeholder="2-20 characters" name="place_pros" minlength="2" maxlength="20"
                         type="text" class="validate" value="{{ place.place_pros }}" required>
                     </div>
                         <!-- cons -->
-                        <div class="card-body input-field-add">
+                    <div class="card-body input-field-add">
                         <label for="place_cons">Cons</label>
                         <input id="place_cons" placeholder="2-20 characters" name="place_cons" minlength="2" maxlength="20"
                         type="text" class="validate" value="{{ place.place_cons }}" required>
-                        <!-- image, upload -->
-                        <input type="file" name="file" required>
+                    </div>
+                    <!-- image url, upload -->
+                    <div class="card-body input-field-add">
+                        <label for="place_cons">Image URL</label>
+                        <input id="image_url" placeholder="Enter URL" name="image_url" minlength="4" maxlength="200"
+                            type="text" class="validate" value="{{ place.place_file }}">
                         <!-- submit button -->
                         <button type="submit" class="registerbtn">Edit Place</button>
                         <!-- cancel button, if form is cancelled user gets redirected to home page -->
                         <a href="{{ url_for('home') }}" class="btn btn-danger btn-block btn-lg" role="button" aria-pressed="true">Cancel</a>
                     </div>
-
                 </div>
             </form>
         </div>
