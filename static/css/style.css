@@ -32,7 +32,7 @@ body{
 /*media only screen fixed to large devices and below*/
 @media only screen and (min-width: 1200px) {
 .home-top {
-    height: 100vh
+    height: 90vh
   }
 }
 
@@ -68,6 +68,11 @@ body{
     background-color: rgba(0, 0, 0, 0.2)
 }
 /*---------------------index.html ----------------------*/
+
+#register-home-btn-style{
+  padding: 16px;
+  color: #f1f1f1;
+}
 
 /*--------------------- Navbar ----------------------*/
 .navbar{
