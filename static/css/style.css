@@ -41,7 +41,7 @@ body{
 .card-of-place {
     overflow: overlay;
     width: auto;
-    height: 500px;
+    height: 550px;
     border-radius: 10px;
 }
 }
