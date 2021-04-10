@@ -160,3 +160,26 @@ All of these inputs are required.
 #### Places page
 
 -   The Places page is displaying all Place cards created by users chronologically, from most recently to oldest
+
+#### View, edit, and delete cards
+
+-   By clicking on My Profile, owner of the card can see all of its Place cards
+-   Each Place card has two buttons, one to edit and one to delete the card
+-   Place cards in this page is shown chronolically, from most recently to oldest
+-   By clicking on edit user will be redirected to the edit place page
+-   User can see all previous inputs and change inputs
+-   If user don't want to change the card the editing can be cancelled by clicking on the cancel button, Place card will then remain the same
+
+#### Security
+
+Several steps were taken to ensure the security of the user's data.
+
+-   The password users are using is secured with hashing method, a secret key which secures users password. It cannot be seen anywhere including the database.
+-   For security reasons, if a user/person tries to access session features, application functionalitites which requires to be logged in, page will redirect to login page. This secority method keeps the application safe. 
+
+### Features Left to Implement
+
+-   Search for Places in place page.
+-   Method to recover password, for this email information will also be needed.
+-   Rate and/or mark Place cards as favourite.
+-   Use an file api. When an image or gif is chosen, file is uploaded to a cloud so the app then can get the file via uploaded file url.
