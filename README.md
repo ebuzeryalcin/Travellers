@@ -105,23 +105,23 @@ This font is used throughout the site:
 
 I tried to use lots of colors which were matching, at she same time I wanted to use standard colors for buttons, delete button has a red colors which is characteristics of its name:
 
--   ![rgb(241, 111, 4)](https://convertingcolors.com/rgb-color-241_111_4.html?search=rgb(241,%20111,%204)) `rgb(241, 111, 4) - Dark, saturated orange`
+-   [rgb(241, 111, 4)](https://convertingcolors.com/rgb-color-241_111_4.html?search=rgb(241,%20111,%204)) `- Dark, saturated orange`
 
 This color was used throughout every page. Mainly because page content appeared nice with orange background and also because it blended in nive with the darker orange navigation bar.
 
--   ![RGB(92, 66, 141)](https://convertingcolors.com/rgb-color-92_66_141.html?search=rgb(92,%2066,%20141)) `RGB(92, 66, 141) - Dark purple`
+-   [RGB(92, 66, 141)](https://convertingcolors.com/rgb-color-92_66_141.html?search=rgb(92,%2066,%20141)) ` - Dark purple`
 
  Used in logo and circles with placeholder for what html page you are in. A color that pops out, simply an eyecatching color. Also used in forms.
 
--   ![Hex(17A2B8)](https://convertingcolors.com/hex-color-17A2B8.html?search=#17a2b8) `Hex(17A2B8) - Sweet blue`
+-   [Hex(17A2B8)](https://convertingcolors.com/hex-color-17A2B8.html?search=#17a2b8) ` - Sweet blue`
 
 This color is used as background color in footer section, blends overall in with orange. 
 
--   ![#f1f1f1](https://convertingcolors.com/hex-color-F1F1F1.html?search=#f1f1f1) `#f1f1f1 - Super light grey`
+-   [#f1f1f1](https://convertingcolors.com/hex-color-F1F1F1.html?search=#f1f1f1) ` - Super light grey`
 
 Texts seemed to appear clearer with this color, suited well. 
 
--   ![Hex(4CAF50)](https://convertingcolors.com/hex-color-4CAF50.html?search=#4CAF50) `Hex(4CAF50) - Green`
+-   [Hex(4CAF50)](https://convertingcolors.com/hex-color-4CAF50.html?search=#4CAF50) ` - Green`
 
 This button color is used to submit register, login and submitting created travels cards. 
 
@@ -213,7 +213,7 @@ Additionally, all code was validated in the following ways:
 
 **HTML** - All pages were run through the [W3C HTML Validator](https://validator.w3.org/) to ensure compliance with the standards.
 
-**CSS** - CSS validation with the W3C's [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) returned overlay was not an overflow value. No other issues were found.
+**CSS** - CSS validation with the W3C's [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) returned overlay was not an overflow value. This is fixed. No other issues were found.
 
 **Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant.
 
