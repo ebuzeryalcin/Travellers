@@ -218,3 +218,52 @@ Additionally, all code was validated in the following ways:
 **Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant.
 
 **Javascript** - All Javascript code was checked with the [JSHint](https://jshint.com/), successfully passed.
+
+## Deployment
+
+Before deploying the application, ensure the following are installed:
+
+-   [Python 3](https://www.python.org/)
+-   [PIP](https://pypi.org/project/pip/)
+-   [Git](https://git-scm.com/)
+-   [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+The application relies on the following service, and account will have to be created:
+
+-   [MongoDB](https://www.mongodb.com/)
+
+### Local Deployment
+
+These are the steps to deploy Travellers locally.
+
+1.  From the application's [repository](https://github.com/ebuzeryalcin/Travellers), click the "code" button and download the zip of the repository.
+
+    Alternatively, you can clone the repository using the following line in your terminal:
+
+        git clone https://github.com/ebuzeryalcin/Travellers.git
+
+2.  Access the folder in your terminal window and install the application's required modules using the following command:
+
+        python -m pip -r requirements.txt
+
+3.  In MongoDB, create a new project called "myfirstcluster", and in this project create a new database called "task_manager".
+
+    This database will contain two collections: `places` and `users`.
+
+4.  Create a file containing your environmental variables called `env.py` at the root level of the application. It will need to contain the following lines and variables:
+
+    ```
+    import os
+
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "YOUR_SECRET_KEY")
+    os.environ.setdefault("MONGO_URI", "YOUR_MONGODB_URI")
+    os.environ.setdefault("MONGO_DBNAME", "task_manager")
+    ```
+
+    Please note that you will need to update the `SECRET_KEY` with your own secret key, as well as the `MONGO_URI` and `MONGO_DBNAME` variables with those provided by those applications.
+
+    If you plan on pushing this application to a public repository, ensure that `env.py` is added to your `.gitignore` file.
+
+5.  The application can now be run locally. In your terminal, type the command `python3 run app.py`. The application will be available in your browser at the address `http://localhost:5000`.
