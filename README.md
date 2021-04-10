@@ -159,7 +159,7 @@ All of these inputs are required.
 
 #### Places page
 
--   The Places page is displaying all Place cards created by users chronologically, from most recently to oldest
+-   The Places page is displaying all Place cards created by users chronologically, from most recently to oldest. Works both when logged in and when logged out.
 
 #### View, edit, and delete cards
 

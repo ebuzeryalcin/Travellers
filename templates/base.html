@@ -21,7 +21,7 @@
     <header>
         <!-- Navbar is copied from https://bootswatch.com/united/ -->
         <nav class=" navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">Travellers</a>
+            <a class="navbar-brand" href="{{ url_for('home') }}">Travellers</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
                 aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,8 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                {% if session.user %}
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('places') }}">Places</a></li>
+                {% if session.user %}
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('add_place') }}">New Place</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">Logout</a></li>
