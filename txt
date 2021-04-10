@@ -10,3 +10,14 @@ place'e randomly veya herhangi bir sekilde degisik userlarin place cardlari yans
 if mobil sayfasi cardlarda scroll olmasin/tamam
 
 guvenlik zaafi/tamam
+
+
+validation tamamlandi
+index 
+places
+login
+register
+add place
+edit place
+base
+profile
