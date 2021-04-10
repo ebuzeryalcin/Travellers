@@ -321,3 +321,16 @@ Ensure to enter your own `SECRET_KEY`, `MONGO_URI`, `MONGODB_NAME` variables.
 1. Go to the deploy tab of your application, and click "Deploy Branch" under the manual deploy section.
 
 2. Travellers is now deployed to heroku. It can be accessed by clicken the "Open App" button on the top right.
+
+## Credits
+
+### Media
+
+-   Travel inspiration [DeanSchneider](https://www.deanschneider.com/hakuna-mipaka/)
+
+### Acknowledgements
+
+-   Inspiration for this project came from my wife Kübra
+-   [Felipe Alarcon](https://github.com/fandressouza) for always giving valuable feedback and for his avaliability
+-   Mehmet Cengiz Turanlı for his support throughout the project
+
