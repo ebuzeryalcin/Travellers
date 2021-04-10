@@ -183,3 +183,24 @@ Several steps were taken to ensure the security of the user's data.
 -   Method to recover password, for this email information will also be needed.
 -   Rate and/or mark Place cards as favourite.
 -   Use an file api. When an image or gif is chosen, file is uploaded to a cloud so the app then can get the file via uploaded file url.
+
+## Technologies Used
+
+-   HTML5
+-   CSS3
+-   Bootstrap
+-   Fontawesome
+-   Google fonts
+-   JavaScript / JQuery
+-   Python
+-   Favicon
+-   Flask
+-   [CSS Autoprefixer](https://autoprefixer.github.io/)
+
+## Tools Used
+
+-   [Lucidchart](https://www.lucidchart.com/pages/) to create the wireframes and to sketch
+-   [Git](https://git-scm.com/) for version control
+-   [Heroku](https://heroku.com/) to deploy the application
+-   VS Code
+-   [Responsive mockups](https://placeit.net/)
