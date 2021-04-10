@@ -86,3 +86,41 @@ Following image illustrates data validation the user can input:
 ![data validation](static/images/readme/data-validation.png)
 
 These elements have been the same throughout the development stage.
+
+### Design
+
+This application have been built with bootstrap, such systems like grid and cards. The [Navbar theme](https://bootswatch.com/united/) and [Bootsrap cards](https://freefrontend.com/bootstrap-cards/) is some of the codes used in this project, while some styles were overwritten in [style.css](static/css/style.css) file.
+
+Fonts and colors were choosen to create a clear look. I wanted an overall colorful and uplifting theme in this project. 
+
+#### Typography
+
+This font is used throughout the site:
+
+1. **Ubuntu**: was used for the most as font in this project. This font was used for customized logo and for page texts. 
+
+![Ubuntu font](static/images/readme/font-ubuntu.PNG)
+
+#### Color Scheme
+
+I tried to use lots of colors which were matching, at she same time I wanted to use standard colors for buttons, delete button has a red colors which is characteristics of its name:
+
+-   ![rgb(241, 111, 4)](https://convertingcolors.com/rgb-color-241_111_4.html?search=rgb(241,%20111,%204)) `rgb(241, 111, 4) - Dark, saturated orange`
+
+This color was used throughout every page. Mainly because page content appeared nice with orange background and also because it blended in nive with the darker orange navigation bar.
+
+-   ![RGB(92, 66, 141)](https://convertingcolors.com/rgb-color-92_66_141.html?search=rgb(92,%2066,%20141)) `RGB(92, 66, 141) - Dark purple`
+
+ Used in logo and circles with placeholder for what html page you are in. A color that pops out, simply an eyecatching color. Also used in forms.
+
+-   ![Hex(17A2B8)](https://convertingcolors.com/hex-color-17A2B8.html?search=#17a2b8) `Hex(17A2B8) - Sweet blue`
+
+This color is used as background color in footer section, blends overall in with orange. 
+
+-   ![#f1f1f1](https://convertingcolors.com/hex-color-F1F1F1.html?search=#f1f1f1) `#f1f1f1 - Super light grey`
+
+Texts seemed to appear clearer with this color, suited well. 
+
+-   ![Hex(4CAF50)](https://convertingcolors.com/hex-color-4CAF50.html?search=#4CAF50) `Hex(4CAF50) - Green`
+
+This button color is used to submit register, login and submitting created travels cards. 
