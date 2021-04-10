@@ -113,6 +113,10 @@ def places():
 
 @app.route("/logout")
 def logout():
+    try:
+        session["user"]
+    except KeyError:
+        return redirect(url_for("login"))
     # User session cookie is removed with session pop method
     flash("Logged out")
     session.pop("user")
