@@ -11,10 +11,6 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = '/static/uploaded_images'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -74,12 +70,14 @@ def login():
                     return redirect(url_for(
                         "profile", username=session["user"]))
             else:
-                # the username/&password is invalid, flash message appears, redirecting to login page
+                # the username/&password is invalid,
+                # flash message appears, redirecting to login page
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
 
         else:
-            # if username doesnt exist flash message generated, user gets redirected to login page again
+            # if username doesnt exist flash message generated,
+            # user gets redirected to login page again
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
     # Render login.html template if method is not POST, GET
@@ -93,7 +91,8 @@ def profile(username):
     except KeyError:
         return redirect(url_for("login"))
     places = mongo.db.places.find({"created_by": username})
-    # This generates the urser's username from my db with session method, temporary cookie.
+    # This generates the urser's username from my db with session method,
+    # temporary cookie.
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
