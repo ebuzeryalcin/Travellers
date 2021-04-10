@@ -62,3 +62,27 @@ Content creator:
 - As a content creator, I'd like to promote my page with nice looking travel cards on my Homepage. 
 - As a content creator, I'd like to promote how to register.
 - As a content creator, I'd like my page to be intuitive and informative for users.
+
+### Wireframes
+
+Based on user stories, wireframes were drawn. Full wireframes is found [here](static/images/readme/travellers-wireframe.png).
+
+![Travellers wireframe](static/images/readme/Travellers-sample.png)
+
+Final design looks quite similar to what was scetched at the beginning of this project. 
+
+### Views and Data Structure
+
+This is how the data structure look:
+
+![data structure](static/images/readme/data-structure.png)
+
+Views and actions:
+
+![views and actions](static/images/readme/travellers-views.png)
+
+Following image illustrates data validation the user can input:
+
+![data validation](static/images/readme/data-validation.png)
+
+These elements have been the same throughout the development stage.
