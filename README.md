@@ -124,3 +124,39 @@ Texts seemed to appear clearer with this color, suited well.
 -   ![Hex(4CAF50)](https://convertingcolors.com/hex-color-4CAF50.html?search=#4CAF50) `Hex(4CAF50) - Green`
 
 This button color is used to submit register, login and submitting created travels cards. 
+
+## Features
+
+### Existing Features
+
+#### Account Registration
+
+-   People can register an account, choose a username and password:
+    -   Username must be between 4 and 10 characters, pattern="^[a-zA-Z0-9]{4,10}$"
+    -   Password must be between 5 and 15 characters, pattern="^[a-zA-Z0-9]{5,15}$"
+    -   Requirement to fill the form to proceed registration
+
+#### User Session
+
+-   Existing users can log into their account using their chosen username and password
+-   Same requirement to fill the form as the registration form, to login
+-   Logout from account, closing session
+-   Trying to accessing a page from the application while logged out, user will be redirected to login page
+
+#### Create New Entries, Place cards
+
+-   Users can create new entries, place cards, when logged in by clicking on New place button at the navbar
+-   This is what the user needs to do to meet the requirements for validation:
+
+    -   City name must be between 2 and 20 characters
+    -   Country name must be between 2 and 20 characters
+    -   The description must be between 10 and 250 caharters, a javascript function below the description input field is counting down the amount of charecters left
+    -   Pros must be between 2 and 20 characters
+    -   Cons must be between 2 and 20 characters
+    -   A image url can be choosen, needs to be a url
+
+All of these inputs are required.
+
+#### Places page
+
+-   The Places page is displaying all Place cards created by users chronologically, from most recently to oldest
