@@ -267,3 +267,57 @@ These are the steps to deploy Travellers locally.
     If you plan on pushing this application to a public repository, ensure that `env.py` is added to your `.gitignore` file.
 
 5.  The application can now be run locally. In your terminal, type the command `python3 run app.py`. The application will be available in your browser at the address `http://localhost:5000`.
+
+### Deployment to Heroku
+
+To deploy Travellers to Heroku, use the following steps:
+
+1. Login to your Heroku account and create a new app.
+
+2. Ensure the Procfile and requirements.txt files exist are present in your local repository.
+
+    The Procfile should contain the following line:
+
+    ```
+    web: python app.py
+    ```
+
+    To ensure requirements.txt exists and is up to date, use the following line in your terminal:
+
+    ```
+    pip3 freeze --local > requirements.txt
+    ```
+
+3. Add heroku as a remote for your git repository by getting the heroku git URL for your application in its settings, and typing the following command:
+
+    ```
+    git remote add heroku https://git.heroku.com/your-heroku-git-url
+    ```
+
+4. Push Travellers to heroku with the following command:
+
+    ```
+    git push heroku master
+    ```
+
+5. In your terminal, enter the following line to prepare the application for launch once it is deployed
+
+    ```
+    heroku ps:scale web=5
+    ```
+
+6. In your app in heroku, go to settings, reveal the config vars and enter the following variables:
+
+| Variable       | Value               |
+| -------------- | ------------------- |
+| IP             | 0.0.0.0             |
+| PORT           | 5000                |
+| SECRET_KEY     | YOUR_SECRET_KEY     |
+| MONGO_URI      | YOUR_MONGO_URI      |
+| MONGODB_NAME   | task_manager        |
+
+Ensure to enter your own `SECRET_KEY`, `MONGO_URI`, `MONGODB_NAME` variables.
+
+1. Go to the deploy tab of your application, and click "Deploy Branch" under the manual deploy section.
+
+2. Travellers is now deployed to heroku. It can be accessed by clicken the "Open App" button on the top right.
