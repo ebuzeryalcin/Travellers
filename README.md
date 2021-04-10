@@ -43,3 +43,22 @@ It has been deployed to heroku and can be viewed from [here](https://travellers-
 ### Project Goal
 
 Travellers is an application which can be used in different screen sizes. It is easy to use and understand. Navigation bar has only needed buttons and overall buttons is well thinked before implemented within the application. Whatever users do the application aims to give fast and intuitive experience. 
+
+### User Stories
+
+Users:
+- As a user, I'd like to have a quick introduction about the page, why I should create an account. 
+- As a user, I'd like the page to clearly show me where to register an account.
+- As a user, I'd like the page to be smooth, easy to use.
+- As a user, I'd like to interact and see other users uploaded travel cards.
+- As a user, I'd like to share my own travel places by creating my own travel cards.
+- As a user, I'd like to be able to upload image of a travel place. 
+- As a user, I'd like to have intuitive buttons when I am logged in.
+- As a user, I'd like to edit or delete my own travel cards.
+- As a user, I'd like to get messages when I have added, edited or deleted a travel card. 
+
+Content creator:
+- As a content creator, I'd like to give an quick and understandable introduction of my page.
+- As a content creator, I'd like to promote my page with nice looking travel cards on my Homepage. 
+- As a content creator, I'd like to promote how to register.
+- As a content creator, I'd like my page to be intuitive and informative for users.
