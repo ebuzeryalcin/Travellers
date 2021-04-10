@@ -204,3 +204,17 @@ Several steps were taken to ensure the security of the user's data.
 -   [Heroku](https://heroku.com/) to deploy the application
 -   VS Code
 -   [Responsive mockups](https://placeit.net/)
+
+## Testing
+
+Testing was done manually throughout the development process.
+
+Additionally, all code was validated in the following ways:
+
+**HTML** - All pages were run through the [W3C HTML Validator](https://validator.w3.org/) to ensure compliance with the standards.
+
+**CSS** - CSS validation with the W3C's [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) returned overlay was not an overflow value. No other issues were found.
+
+**Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant.
+
+**Javascript** - All Javascript code was checked with the [JSHint](https://jshint.com/), successfully passed.
