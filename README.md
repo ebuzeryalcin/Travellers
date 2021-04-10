@@ -31,3 +31,15 @@
     - [Acknowledgements](#acknowledgements)
 
 ---
+
+Travellers is an travel web application that offers users to create, edit, share and delete uploaded travel places. People travel and often forget what they did at a specific place, what they liked and disliked. This application allows users to upload travel places which will be public for other users. An easy to use application where people share travel destiantions with other people. 
+
+![Travellers responsive display](static/images/readme/travellers-responsive-display.PNG)
+
+It has been deployed to heroku and can be viewed from [here](https://travellers-ebuzer-yalcin.herokuapp.com/).
+
+## UX
+
+### Project Goal
+
+Travellers is an application which can be used in different screen sizes. It is easy to use and understand. Navigation bar has only needed buttons and overall buttons is well thinked before implemented within the application. Whatever users do the application aims to give fast and intuitive experience. 
