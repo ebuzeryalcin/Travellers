@@ -67,3 +67,28 @@ When user clicks on the Edit button in a specific card in Profile page, page red
 -   When submitting flash message appears telling edit was successful
 -   When clicking on Cancel user is redirected to Home page, the card previous inputs and image reamins the same
 -   As when creating a whole new Place card, if any field is empty user cannot submit the form
+
+### Places Page
+
+Places page is an marketing page, therefore this page works whether users are logged in or not.
+
+-   As expected Place cards cannot be edited or deleted from this page
+-   Place cards are listed chronologically
+-   Place cards is loaded properly from the database, information is correct
+-   All users created cards is displaying, different cards from different users.
+-   Username is correct showed in "Created by:"
+-   Scroll function in cards is properly working
+
+## Responsive Testing
+
+To be able to use the application in different devices and browsers is important. I made sure the responsiveness of the application was working on various devices and browsers. Testing were also made throughout the project. 
+
+The navbar, cards, layout, buttons and functionalities were tested on devices and with [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb) Chrome extension.
+
+These tests were performed on the following browsers and devices:
+
+-   Chrome, Safari and Firefox on Mac OS, MacBook Air 
+-   Chrome, edge and Firefox on Windows, Dell Latitude 5400
+-   Chrome and Safari on iPhone 11
+-   Chrome on Oneplus 7
+-   Chrome and Safari on iPhone 7 Plus
