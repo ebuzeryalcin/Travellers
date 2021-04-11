@@ -209,6 +209,8 @@ Several steps were taken to ensure the security of the user's data.
 
 Testing was done manually throughout the development process.
 
+The full rundown of the testing can be found [here](TESTING.md).
+
 Additionally, all code was validated in the following ways:
 
 **HTML** - All pages were run through the [W3C HTML Validator](https://validator.w3.org/) to ensure compliance with the standards.
