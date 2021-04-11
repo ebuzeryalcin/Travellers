@@ -34,3 +34,36 @@ When form is validated, message occurs telling registration was successful. Link
 When loging in to the application an existing username must be entered together with a correct password. When user login information is not found in the database and user fails to use right username and/or password, a flash message appears. 
 
 When username exists and password is entered right, the login succeeds and the user session is created. Link below login form to register if user has an account, works.
+
+### Creating New Entries, Place cards
+
+Following tests have been done. Expected results have returned:
+
+-   Adding an travel card with empty fields does not add a new Place Card
+-   Description field, less than 10 over 250 characters cannot be added
+-   Image URL must be added
+-   Overall every field has its requirements, the application is not letting a new card being created even if one field is not uppfilling its requirements
+
+After successfully creating a new card entries were uploaded to the database as an unique new place card. Profile page and Place page is displaying created card.
+
+### Profile Page
+
+User specific created place cards is listed chronologically 
+
+-   Page is responsive, scroll functionality disappears when page is used on smaller display
+-   When clicking the Delete button, card is removed successfully
+-   Flash message appears telling card is deleted
+-   Database is removing deleted card
+-   All card information is correct displaying
+-   When clicking on Edit button user gets redirected to Edit Place page.
+
+### Edit Place
+
+When user clicks on the Edit button in a specific card in Profile page, page redirects user to Edit Place page
+
+-   Previously created card can be edited
+-   Previously filled inputs is displaying
+-   User can choose between editing multiple or just one field
+-   When submitting flash message appears telling edit was successful
+-   When clicking on Cancel user is redirected to Home page, the card previous inputs and image reamins the same
+-   As when creating a whole new Place card, if any field is empty user cannot submit the form
