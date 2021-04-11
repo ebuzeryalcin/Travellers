@@ -13,3 +13,24 @@ Manual testing was done throughout the development process. Often when new featu
 
 **Favicon was throwing an error to console**: Favicon was throwing errors to console telling "GET /profile/static/images/favicon/favicon.ico HTTP/1.1" 404 and "GET /profile/static/images/favicon/site.webmanifest HTTP/1.1" 404 errors. I googled this and found out links in python needs to look different. By changing favicon links in my base. html page, adding href="{{ url_for('static', filename='path') }}", I was able to fix these errors. 
 
+
+### Home Page
+
+Page is responsive, overall buttons and social links are working. User is redirected correctly when clicking on register button. 
+
+### Registration Page
+
+The validation rules for the creation of an account were tested to ensure correct data was sent to the database. Following list was returned as an error, as expected:
+
+-   One of the fields missing
+-   Username too long or short
+-   Password too long or short
+-   Username already exists
+
+When form is validated, message occurs telling registration was successful. Link below register form to login if user has an account, works. 
+
+### Login Page
+
+When loging in to the application an existing username must be entered together with a correct password. When user login information is not found in the database and user fails to use right username and/or password, a flash message appears. 
+
+When username exists and password is entered right, the login succeeds and the user session is created. Link below login form to register if user has an account, works.
