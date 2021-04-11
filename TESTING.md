@@ -13,6 +13,8 @@ Manual testing was done throughout the development process. Often when new featu
 
 **Favicon was throwing an error to console**: Favicon was throwing errors to console telling "GET /profile/static/images/favicon/favicon.ico HTTP/1.1" 404 and "GET /profile/static/images/favicon/site.webmanifest HTTP/1.1" 404 errors. I googled this and found out links in python needs to look different. By changing favicon links in my base. html page, adding href="{{ url_for('static', filename='path') }}", I was able to fix these errors. 
 
+**CSS validator throwing an value error**: When validating style.css there was an overflow: **overlay** style for my Bootstrap cards. Jigsaw validator returned overlay as an false value in overflow style. While testing overall layout on different browsers I found out that overlay, which was used for scrolling down in Place cards, was not correctly functioning anyway. Text in the Place cards were overfloating the actual card. Instead of using overlay, a false value, I changed style to overflow: auto. This fixed overfloating text issue. 
+
 
 ### Home Page
 
