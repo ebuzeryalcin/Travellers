@@ -83,6 +83,9 @@ Places page is an marketing page, therefore this page works whether users are lo
 
 ## Responsive Testing
 
+**Iphone 11 display and 1920x1200 monitor**
+![Iphone 11 and 1920x1200 monitor](static/images/readme/screens.png) 
+
 To be able to use the application in different devices and browsers is important. I made sure the responsiveness of the application was working on various devices and browsers. Testing were also made throughout the project. 
 
 The navbar, cards, layout, buttons and functionalities were tested with different devices and with [Responsive Viewer](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb) Chrome extension.
@@ -90,7 +93,7 @@ The navbar, cards, layout, buttons and functionalities were tested with differen
 These tests were performed on the following browsers and devices:
 
 -   Chrome, Safari and Firefox on Mac OS, MacBook Air 
--   Chrome, edge and Firefox on Windows, Dell Latitude 5400
+-   Chrome, edge and Firefox on Windows, Dell Latitude 5400, 1920x1200 monitor
 -   Chrome and Safari on iPhone 11
 -   Chrome on Oneplus 7
 -   Chrome and Safari on iPhone 7 Plus
