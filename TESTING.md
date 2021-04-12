@@ -85,6 +85,13 @@ Places page is an marketing page, therefore this page works whether users are lo
 
 **Iphone 11 display and 1920x1200 monitor**
 ![Iphone 11 and 1920x1200 monitor](static/images/readme/screens.png) 
+**Lighthouse Desktop Result**
+
+![Iphone 11 and 1920x1200 monitor](static/images/readme/lighthouse-desktop.PNG) 
+
+**Lighthouse Mobile Result**
+
+![Iphone 11 and 1920x1200 monitor](static/images/readme/lighthouse-mobile.PNG) 
 
 To be able to use the application in different devices and browsers is important. I made sure the responsiveness of the application was working on various devices and browsers. Testing were also made throughout the project. 
 
