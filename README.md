@@ -32,7 +32,7 @@
 
 ---
 
-Travellers is an travel web application that offers users to create, edit, share and delete uploaded travel places. People travel and often forget what they did at a specific place, what they liked and disliked. This application allows users to upload travel places which will be public for other users. An easy to use application where people share travel destiantions with other people. 
+Travellers is an travel web application that offers users to create, edit, share and delete uploaded travel places. People travel and often forget what they did at a specific place, what they liked and disliked. This application allows users to upload travel places which will also be public for other users. An easy to use application where people share travel destiantions with other people. 
 
 ![Travellers responsive display](static/images/readme/travellers-responsive-display.PNG)
 
@@ -65,7 +65,7 @@ Content creator:
 
 ### Wireframes
 
-Based on user stories, wireframes were drawn. Full wireframes is found [here](static/images/readme/travellers-wireframe.png).
+Based on user stories, wireframes were drawn. Full wireframes is found [here](static/images/readme/Travellers-wireframe.png).
 
 ![Travellers wireframe](static/images/readme/Travellers-sample.png)
 
@@ -89,9 +89,9 @@ These elements have been the same throughout the development stage.
 
 ### Design
 
-This application have been built with bootstrap, such systems like grid and cards. The [Navbar theme](https://bootswatch.com/united/) and [Bootsrap cards](https://freefrontend.com/bootstrap-cards/) is some of the codes used in this project, while some styles were overwritten in [style.css](static/css/style.css) file.
+This application have been built with Bootstrap, such systems like grid and cards. The [Navbar theme](https://bootswatch.com/united/) and [Bootsrap cards](https://freefrontend.com/bootstrap-cards/) is some of the codes used in this project, while some styles were overwritten in [style.css](static/css/style.css) file.
 
-Fonts and colors were choosen to create a clear look. I wanted an overall colorful and uplifting theme in this project. 
+Fonts and colors were chosen to create a clear look. I wanted an overall colorful and uplifting theme in this project. 
 
 #### Typography
 
@@ -107,7 +107,7 @@ I tried to use lots of colors which were matching, at she same time I wanted to 
 
 -   [rgb(241, 111, 4)](https://convertingcolors.com/rgb-color-241_111_4.html?search=rgb(241,%20111,%204)) `- Dark, saturated orange`
 
-This color was used throughout every page. Mainly because page content appeared nice with orange background and also because it blended in nive with the darker orange navigation bar.
+This color was used throughout every page. Mainly because page content appeared nice with orange background and also because it blended in nice with the darker orange navigation bar.
 
 -   [RGB(92, 66, 141)](https://convertingcolors.com/rgb-color-92_66_141.html?search=rgb(92,%2066,%20141)) ` - Dark purple`
 
@@ -153,7 +153,7 @@ This button color is used to submit register, login and submitting created trave
     -   The description must be between 10 and 250 caharters, a javascript function below the description input field is counting down the amount of charecters left
     -   Pros must be between 2 and 20 characters
     -   Cons must be between 2 and 20 characters
-    -   A image url can be choosen, needs to be a url
+    -   A image url can be chosen, needs to be a url
 
 All of these inputs are required.
 
@@ -165,7 +165,7 @@ All of these inputs are required.
 
 -   By clicking on My Profile, owner of the card can see all of its Place cards
 -   Each Place card has two buttons, one to edit and one to delete the card
--   Place cards in this page is shown chronolically, from most recently to oldest
+-   Place cards in this page is shown chronologically, from most recently to oldest
 -   By clicking on edit user will be redirected to the edit place page
 -   User can see all previous inputs and change inputs
 -   If user don't want to change the card the editing can be cancelled by clicking on the cancel button, Place card will then remain the same
@@ -174,8 +174,8 @@ All of these inputs are required.
 
 Several steps were taken to ensure the security of the user's data.
 
--   The password users are using is secured with hashing method, a secret key which secures users password. It cannot be seen anywhere including the database.
--   For security reasons, if a user/person tries to access session features, application functionalitites which requires to be logged in, page will redirect to login page. This secority method keeps the application safe. 
+-   The password users are using is secured with the hashing method, a secret key which secures users password. It cannot be seen anywhere including the database.
+-   For security reasons, if a user/person tries to access session features, application functionalitites which requires to be logged in, page will redirect to login page. This security method keeps the application safe. 
 
 ### Features Left to Implement
 
@@ -219,7 +219,7 @@ Additionally, all code was validated in the following ways:
 
 **Python** - All Python code was checked with the [PEP8 online validator](http://pep8online.com/) and is PEP8 compliant.
 
-**Javascript** - All Javascript code was checked with the [JSHint](https://jshint.com/), successfully passed.
+**Javascript** - All Javascript code was checked with [JSHint](https://jshint.com/), successfully passed.
 
 ## Deployment
 
